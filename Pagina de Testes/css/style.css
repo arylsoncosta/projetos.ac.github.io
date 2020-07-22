@@ -1,27 +1,128 @@
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
     border: none;
+}
+
+:root{
+    --cor-topo: #231f17;
+    --cor-botao: #504734; 
 }
 
 body , html{
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'SF Pro', monospace;
+}
+
+@font-face {
+    src: url('fonts/SF-Font-Pro.dmg');
+    font-family: 'SF Pro';    
 }
 
 a{
     text-decoration: none;
 }
 
-.container{
-    background-image: url("../img/fundo.jpg");
-    background:contain , no-repeat;
+.clear{
+    clear: both;
+}
+
+.center{
+    width: 87%;
+    margin: 0 auto;
+
+}
+
+.header{
+    background-color: var(--cor-topo);
     width: 100%;
-    height: 100%;
+    height: 9%;
+}
+
+.header img{
+    width: auto;
+    height: 40px;
+    margin: 6px;
+}
+
+
+.container-baner{
+    background-image: url("../img/fundo.jpg");
+    background:cover , no-repeat, center;
+    width: 100%;
+    height: 75%;
     color:#fff;
 }
 
-.container p{
+.container-baner > .center{
+    height: 100%;
+}
+
+.formulario{
+    width: 400px;
+    height: calc(100% + 30px);
+    border:  rgba(200, 200, 200, 0.5) solid 6px;
+    border-radius: 3%;
+    border-width: ;
+    float: right;
+    position: relative;
+    top:-15px;
+    background-color: rgba(200, 200, 200, 0.8);
+}
+
+
+.formulario > h1{
+    color:#fff;
+    padding: 4px 2%;
+    text-align: justify;
+    font-weight: normal;
+    font-size: 23px;
+    cursor: default;
+}
+
+.formulario form{
+    padding-left: 10px ;
+    height: 100%;
+}
+
+
+.formulario form p{
+    color:#ccc;
+    margin: 20px 0;
+    cursor: default;
+}
+
+.input-container{
+    margin-top: 20px;
     text-align: center;
-    padding-top: 2%;
+    
+}
+
+.input-container span{
+    display: inline-block;
+    width: calc(100% - 20px);
+    font-size: 17px;
+    color:#fff; 
+    text-align: left;
+    cursor: default;
+}
+
+.input-container input[type=text]{
+    width: calc(100% - 20px);
+    height: 30px;
+    border-radius: 14%;
+    margin: 1% auto;
+    text-align: left;
+}
+
+.input-container input[type=submit] {
+ margin: 0 auto;
+ width: 60%;  
+ height: 35px;
+ font-size: 20px;
+ border-radius: 12%; 
+ cursor: pointer;
+ color: #fff;
+ background-color: var(--cor-botao);
 }
